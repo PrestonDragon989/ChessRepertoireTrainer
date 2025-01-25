@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!-- Giant sidebar with all of the navigation places -->
+<div class="sidebar">
+    <div class="top">
+        <div class="logo">
+            <i class="bx bxl-codepen"></i>
+            <span>Chess User</span>
+        </div>
+
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <div class="user">
+        <img src="{{ url_for('static', filename='images/placeholder/image.png') }}" alt="The user's image." class="user-img">
+        <div>
+            <p class="bold">Clint B.</p>
+            <p>Admin</p>
+        </div>
+    </div>
+    <ul>
+        <li>
+            <a href="/">
+                <i class="bx bxs-grid-alt"></i>
+                <span class="nav-item">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="bx bxs-food-menu"></i>
+                <span class="nav-item">Products</span>
+            </a>
+            <span class="tooltip">Products</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="bx bx-body"></i>
+                <span class="nav-item">Categories</span>
+            </a>
+            <span class="tooltip">Categories</span>
+        </li>
+        <li>
+            <a href="/about">
+                <i class="bx bx-location-plus"></i>
+                <span class="nav-item">About</span>
+            </a>
+            <span class="tooltip">About</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="bx bx-cog"></i>
+                <span class="nav-item">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class="bx bxs-log-out"></i>
+                <span class="nav-item">Exit</span>
+            </a>
+            <span class="tooltip">Exit</span>
+        </li>
+    </ul>
+</div>
+
+<script>
+    // Getting elements from html
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    // Toggling visibility of sidebar from button click
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
