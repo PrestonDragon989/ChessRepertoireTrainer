@@ -31,7 +31,7 @@
     width: 250px;
 }
 
-.sidebar #btn {
+.sidebar #toggle_button {
     position: absolute;
     color: rgb(255, 255, 255);
     top: .4rem;
@@ -42,7 +42,7 @@
     cursor: pointer;
 }
 
-.sidebar.active #btn {
+.sidebar.active #toggle_button {
     left: 90%;
 }
 
