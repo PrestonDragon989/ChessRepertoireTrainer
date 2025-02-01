@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+
 <!-- Giant sidebar with all of the navigation places -->
 <div class="sidebar">
     <div class="top">
@@ -13,7 +15,7 @@
     <div class="user">
         <img src="{{ url_for('static', filename='images/placeholder/image.png') }}" alt="The user's image." class="user-img">
         <div>
-            <p class="bold">{{ user_name }}</p>
+            <p class="bold">{{ userSettings["display_name"] }}</p>
             <p>Admin</p>
         </div>
     </div>
@@ -47,7 +49,7 @@
             <span class="tooltip">About</span>
         </li>
         <li>
-            <a href="#">
+            <a href="/settings">
                 <i class="bx bx-cog"></i>
                 <span class="nav-item">Settings</span>
             </a>

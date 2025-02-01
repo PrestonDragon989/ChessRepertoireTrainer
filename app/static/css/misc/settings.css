@@ -1,0 +1,91 @@
+/* Main segment styling (Title, lines, sub titles) */
+h1 {
+    font-size: 275%;
+}
+
+h2 {
+    font-size: 200%;
+
+    margin-bottom: 15px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    border: none;
+    height: 3px;
+
+    color: #000;
+    background-color: #000;
+}
+
+hr.bold {
+    height: 5px;
+}
+
+
+/*  */
+ul.setting-options {
+    margin-left: 20px;
+}
+
+ul.setting-options i {
+    margin-left: 100px;
+    padding-left: 100px;
+}
+
+li.option {
+    margin: 15px;
+
+    list-style-type: none;
+    font-size: 150%;
+}
+.option {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+}
+
+.option-icon {
+    margin-right: 10px;
+}
+
+
+/* Right side option styling */
+.right {
+    justify-content: right;
+    align-items: right;
+    margin-left: auto;
+    padding-right: 20%;
+}
+
+.link-option-button {
+    background-color: #eee;
+    width: 90px;
+    height: 30px;
+}
+
+.link-option-button a {
+    text-decoration: none;
+    color: #12171e;
+}
+
+.dropdown-menu {
+    width: 180px;
+    height: 30px;
+
+    background-color: #eee;
+
+    text-align: center;
+}
+
+#display-name {
+    width: 180px;
+    height: 30px;
+
+    text-align: center;
+
+    background-color: #eee;
+}

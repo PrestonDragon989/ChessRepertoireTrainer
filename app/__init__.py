@@ -3,6 +3,8 @@ import sys
 from flask import Flask, render_template
 
 from app.blueprints import main_blueprint
+from app.blueprints import api_blueprint
+
 from app.logger import get_chess_logger
 
 from threading import Thread
@@ -16,6 +18,7 @@ class App(Thread):
 
         # Flask Initialization
         self.flask.register_blueprint(main_blueprint)
+        self.flask.register_blueprint(api_blueprint, url_prefix="/api")
 
         @self.flask.errorhandler(404)
         def page_not_found(e):

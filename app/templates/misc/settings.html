@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon"> -->
+    <title>Chess Trainer Settings</title>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/misc/settings.css') }}">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+   <!-- Sidebar -->
+   {% include 'snippets/sidebar.html' %}
+
+   <!-- Main Page Content -->
+   <div class="main-content">
+       <div class="container">
+           <h1>Settings</h1>
+           <hr class="bold">
+
+            <!-- Graphics Related Options -->
+            <h2>Graphics</h2>
+            <ul class="settings-options">
+                <li class="option">
+                    <i class='bx bxs-palette option-icon'></i>
+                    <span>Color Theme</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="color-theme">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="red">Red</option>
+                            <option value="orange">Orange</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="purple">Purple</option>
+                        </select>
+                    </span>
+                </li>
+
+                <li class="option">
+                    <i class='bx bx-palette option-icon'></i>
+                    <span>Piece Style</span>
+                    <span class="right">
+                        <select class="dropdown-menu" id="piece-style">
+                            <option value="cburnett">Cburnett</option>
+                            <option value="merida">Merida</option>
+                            <option value="pirouetti">Pirouetti</option>
+                            <option value="chessnut">Chessnut</option>
+                            <option value="chess7">Chess7</option>
+                            <option value="companion">Companion</option>
+                            <option value="cardinal">Cardinal</option>
+                            <option value="kosal">Kosal</option>
+                            <option value="maestro">Maestro</option>
+                            <option value="fresca">Fresca</option>
+                            <option value="gioco">Gioco</option>
+                            <option value="staunty">Staunty</option>
+                        </select>
+                    </span>
+                </li>
+
+                <li class="option">
+                    <i class='bx bx-square option-icon'></i>
+                    <span>Board Theme</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="board-theme">
+                            <option value="light_and_dark_brown">Light & Dark Brown</option>
+                            <option value="white_and_grey">White & Grey</option>
+                            <option value="purple_and_pink">Purple & Pink</option>
+                            <option value="light_red_and_blue">Light Red & Blue</option>
+                            <option value="light_green_and_dark_green">Light Green & Dark Green</option>
+                        </select>
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Feature Related Options -->
+            <hr>
+            <h2>Features</h2>
+            <ul class="settings-options">
+                <li class="option">
+                    <i class='bx bxs-edit-alt option-icon'></i>
+                    <span>Show Notation During Practice</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="show-notation-during-training">
+                            <option value="true">Show</option>
+                            <option value="false">Don't Show</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="option">
+                    <i class='bx bx-edit-alt option-icon'></i>
+                    <span>Show Variation Name During Practice</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="show-variation-name-during-training">
+                            <option value="true">Show</option>
+                            <option value="false">Don't Show</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="option">
+                    <i class='bx bx-star option-icon'></i>
+                    <span>Show Move Annotation Glyphs During Practice</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="show-annotation-glyphs-during-training">
+                            <option value="true">Show</option>
+                            <option value="false">Don't Show</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="option">
+                    <i class='bx bxs-message-dots option-icon'></i>
+                    <span>Show Move Comments During Training</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="show-move-comments-during-training">
+                            <option value="true">Show</option>
+                            <option value="false">Don't Show</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="option">
+                    <i class='bx bxs-volume-mute option-icon'></i>
+                    <span>Mute Sounds</span>
+
+                    <span class="right">
+                        <select class="dropdown-menu" id="mute">
+                            <option value="false">Don't Mute</option>
+                            <option value="true">Mute</option>
+                        </select>
+                    </span>
+                </li>
+                <li class="option">
+                    <i class='bx bx-text option-icon'></i>
+                    <span>Display name</span>
+
+                    <span class="right">
+                        <input type="text" id="display-name" maxlength="20">
+                    </span>
+                </li>
+            </ul>
+ 
+            <!-- Code Related Options -->
+            <hr>
+            <h2>Miscellaneous</h2>
+            <ul class="settings-options">
+                <li class="option">
+                    <i class='bx bxs-book-content option-icon'></i>
+                    <span>Wiki</span>
+                    <span class="right"><button class="link-option-button"><a href="https://github.com/PrestonDragon989/ChessRepertoireTrainer/wiki" target="_blank">Visit Site</a></button></span>
+                </li>
+
+                <li class="option">
+                    <i class='bx bxs-bug option-icon' ></i>
+                    <span>Bug Report</span>
+                    <span class="right"><button class="link-option-button"><a href="https://github.com/PrestonDragon989/ChessRepertoireTrainer/issues" target="_blank">Visit Site</a></button></span>
+                </li>
+
+                <li class="option">
+                    <i class='bx bxl-github option-icon'></i>
+                    <span>Repository</span>
+                    <span class="right"><button class="link-option-button"><a href="https://github.com/PrestonDragon989/ChessRepertoireTrainer" target="_blank">Visit Site</a></button></span>
+                </li>
+            </ul>
+
+       </div>
+   </div>
+
+   <script type="module">
+        import { idToKey, importUserSettingsIntoUI, elements, sendNewUserData } from "{{url_for('static', filename='js/misc/settings.js')}}";
+
+        // Getting Initial Data with template rendering
+        let userSettings = JSON.parse('{{ userSettings | tojson }}');
+
+        addEventListener("DOMContentLoaded", () => {
+            // Setting up user's settings
+            importUserSettingsIntoUI(userSettings);
+
+            // Setting up event listeners for a setting change, and updating server's user setting's
+            for (const [id, key] of Object.entries(idToKey)) {
+                elements[id].addEventListener("change", () => {
+                    sendNewUserData(userSettings, key, elements[id].value);
+                })
+            }
+        })
+   </script>
+
+</body>
+</html>

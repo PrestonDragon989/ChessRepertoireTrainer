@@ -1,0 +1,12 @@
+.main-content {
+    background-color: #eee;
+}
+
+.container {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.main-content h1 {
+    color: #000;
+}
