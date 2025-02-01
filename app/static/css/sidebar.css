@@ -12,7 +12,7 @@
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -150,7 +150,6 @@
 
 .main-content {
     position: relative;
-    background-color: #eee;
     min-height: 100vh;
     top: 0;
     left: 5vw;
