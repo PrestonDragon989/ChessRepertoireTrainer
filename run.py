@@ -9,7 +9,7 @@ app = create_app("logs/chess/log.log")
 def shutdown(_signum, _frame):
     print(f"\n{c.Fore.MAGENTA}SHUTTING DOWN SERVER")
 
-    exit()
+    app.exit()
 
 
 if __name__ == '__main__':

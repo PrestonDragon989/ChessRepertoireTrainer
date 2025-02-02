@@ -1,0 +1,12 @@
+{
+    "board_theme": "light_and_dark_brown",
+    "color_theme": "light",
+    "display_name": "Sample User",
+    "mute": "false",
+    "piece_style": "cburnett",
+    "show_annotation_glyphs_during_training": "false",
+    "show_eval": "after",
+    "show_move_comments_during_training": "false",
+    "show_notation_during_training": "true",
+    "show_variation_name_during_training": "true"
+}

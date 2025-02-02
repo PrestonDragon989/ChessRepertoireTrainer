@@ -1,6 +1,9 @@
 # Jetbrains / Pycharm
 /.idea/
 
+# Personal User Settings
+data/user_settings.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

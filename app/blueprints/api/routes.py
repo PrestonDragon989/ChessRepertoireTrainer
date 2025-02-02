@@ -1,6 +1,8 @@
 from flask import request, jsonify, json
 import json
 
+from app.database import dump_user_settings
+
 from . import bp
 
 @bp.route('/update_user_settings', methods=['POST'])
@@ -21,8 +23,8 @@ def change_user_settings():
         else:
             raise ValueError("Invalid data format received")
 
-        # TODO: Add in the handling of the new user data
-        print(new_user_settings)
+        # Writing new Settings to the user's file
+        dump_user_settings(new_user_settings)
 
         # Return Code Handling
         return jsonify({'status': 'success', 'message': 'Data properly received.'})

@@ -7,6 +7,7 @@ export const idToKey = {
     "show-variation-name-during-training": "show_variation_name_during_training",
     "show-annotation-glyphs-during-training": "show_annotation_glyphs_during_training",
     "show-move-comments-during-training": "show_move_comments_during_training",
+    "show-eval": "show_eval",
     "mute": "mute",
     "display-name": "display_name"
 };
