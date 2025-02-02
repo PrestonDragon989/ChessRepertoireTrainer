@@ -2,6 +2,8 @@ from json import load, dump
 
 from .paths import USER_SETTINGS_PATH
 
+from .misc import get_color_themes
+
 import os.path as path
 
 
@@ -23,7 +25,7 @@ def load_user_settings() -> dict:
     # Checking to see if the user file exists yet, and if not creates one with the basic sample settings
     if not path.exists(USER_SETTINGS_PATH):
         with open(USER_SETTINGS_PATH, "w") as file:
-            dump(SAMPLE_USER, file)
+            dump(_SAMPLE_USER, file)
 
     # Returns user settings dictionary
     with open(USER_SETTINGS_PATH, "r") as file:
@@ -34,3 +36,9 @@ def dump_user_settings(new_user_settings: dict) -> None:
     # Gets user settings
     with open(USER_SETTINGS_PATH, "w") as file:
         return dump(new_user_settings, file)
+
+
+def get_user_theme() -> dict:
+    theme = load_user_settings()["color_theme"]
+
+    return get_color_themes()[theme]

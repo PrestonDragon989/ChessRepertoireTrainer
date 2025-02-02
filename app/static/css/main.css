@@ -7,6 +7,28 @@
     overflow-y: auto;
 }
 
+/* Main segment styling (Title, lines, sub titles) */
 .main-content h1 {
+    font-size: 275%;
+}
+
+.main-content h2 {
+    font-size: 200%;
+
+    margin-bottom: 15px;
+}
+
+.main-content hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    border: none;
+    height: 3px;
+
     color: #000;
+    background-color: #000;
+}
+
+.main-content hr.bold {
+    height: 5px;
 }

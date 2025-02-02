@@ -10,7 +10,8 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/misc/settings.css') }}">
 
-    
+    <!-- Theme Setup -->
+    {% include 'snippets/theme.html' %}
 
 </head>
 <body>
@@ -33,14 +34,14 @@
 
                     <span class="right">
                         <select class="dropdown-menu" id="color-theme">
-                            <option value="light">Light</option>
+                            <!-- <option value="light">Light</option>
                             <option value="dark">Dark</option>
                             <option value="red">Red</option>
                             <option value="orange">Orange</option>
                             <option value="yellow">Yellow</option>
                             <option value="green">Green</option>
                             <option value="blue">Blue</option>
-                            <option value="purple">Purple</option>
+                            <option value="purple">Purple</option> -->
                         </select>
                     </span>
                 </li>
@@ -194,6 +195,14 @@
 
         // Getting Initial Data with template rendering
         let userSettings = JSON.parse('{{ userSettings | tojson }}');
+        let colorThemes = JSON.parse('{{ colorThemes | tojson }}');
+
+        // Adding color themes as options
+        for (const theme of Object.keys(colorThemes)) {
+            console.log(theme);
+            const newThemeOption = new Option(colorThemes[theme]["name"], theme);
+            elements['color-theme'].add(newThemeOption);
+        }
 
         addEventListener("DOMContentLoaded", () => {
             // Setting up user's settings

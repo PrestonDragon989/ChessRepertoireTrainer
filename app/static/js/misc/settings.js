@@ -46,6 +46,12 @@ export async function sendNewUserData(userData, key, newValue) {
         // Handle Response (Error or Success)
         const result = await response.json();
         console.log('Server responded:', result, `Data Changed: ${key} => ${newValue}`);
+
+        // Making page reload if it's a theme change
+        if (key == "color_theme") {
+            window.location.reload();
+        }
+
     } catch (error) {
         console.error('Error sending data:', error);
     }

@@ -8,7 +8,7 @@
 .user-img {
     width: 50px;
     border-radius: 100%;
-    border: 1px solid #eee;
+    border: 2px solid #eee;
 }
 
 .sidebar {
@@ -33,7 +33,7 @@
 
 .sidebar #toggle_button {
     position: absolute;
-    color: rgb(255, 255, 255);
+    color: #fff;
     top: .4rem;
     left: 50%;
     font-size: 1.2rem;

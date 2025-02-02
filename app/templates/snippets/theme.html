@@ -1,0 +1,76 @@
+{% set theme = theme or {
+    "main-content": {
+        "background-color": "#eee",
+        "text-color": "#000"
+    },
+    "sidebar": {
+        "background-color": "#1217e",
+        "text-color": "#fff"
+    }
+} %}
+
+<style>
+    /* Main Content */
+    .main-content {
+        background-color: {{ theme["main-content"]["background-color"] }};
+    }
+    .main-content h1, h2, p, input, .option-icon, p a {
+        color: {{ theme["main-content"]["text-color"] }};
+    }
+
+    .main-content hr {
+        color: {{ theme["main-content"]["text-color"] }};
+        background-color: {{ theme["main-content"]["text-color"] }};
+    }
+
+    .main-content li span {
+        color: {{ theme["main-content"]["text-color"] }};
+    }
+
+    .main-content select option {
+        color: {{ theme["main-content"]["text-color"] }};
+    }
+    .main-content .dropdown-menu {
+        color: {{ theme["main-content"]["text-color"] }};
+    }
+
+    .main-content .link-option-button {
+        background-color: {{ theme["main-content"]["background-color"] }};
+    }
+
+    .main-content .link-option-button a {
+        color: {{ theme["main-content"]["text-color"] }};
+    }
+
+    .main-content .dropdown-menu {
+        background-color: {{ theme["main-content"]["background-color"] }};
+    }
+
+    #display-name {
+        background-color: {{ theme["main-content"]["background-color"] }};
+    }
+
+    /* Sidebar Content */
+    .sidebar {
+        background-color: {{ theme["sidebar"]["background-color"] }};
+    }
+    .user-img {
+        border: 2px solid {{ theme["sidebar"]["text-color"] }};
+    }
+    .sidebar #toggle_button {
+        color: {{ theme["sidebar"]["text-color"] }};
+    }
+    .sidebar .top .logo {
+        color: {{ theme["sidebar"]["text-color"] }};
+    }
+    .user p {
+        color: {{ theme["sidebar"]["text-color"] }};
+    }
+    .sidebar ul li a {
+        color: {{ theme["sidebar"]["text-color"] }};
+    }
+    .sidebar ul li a:hover {
+        background-color: {{ theme["sidebar"]["text-color"] }};
+        color: {{ theme["sidebar"]["background-color"] }};
+    }
+</style>

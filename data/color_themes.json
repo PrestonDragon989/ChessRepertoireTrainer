@@ -1,10 +1,24 @@
 {
-  "light": {},
-  "dark": {},
-  "red": {},
-  "orange": {},
-  "yellow": {},
-  "green": {},
-  "blue": {},
-  "purple": {}
+  "light": {
+    "name": "Light",
+    "main-content": {
+      "background-color": "#eee",
+      "text-color": "#000"
+    },
+    "sidebar": {
+      "background-color": "#1217e",
+      "text-color": "#fff"
+    }
+  },
+  "dark": {
+    "name": "Dark",
+    "main-content": {
+      "background-color": "#161718",
+      "text-color": "#c3c1bf"
+    },
+    "sidebar": {
+      "background-color": "#293963",
+      "text-color": "#fAf9f6"
+    }
+  }
 }
